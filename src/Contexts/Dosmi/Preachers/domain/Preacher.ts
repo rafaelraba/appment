@@ -1,4 +1,4 @@
-export class Course {
+export class Preacher {
   readonly id: string;
   readonly name: string;
   readonly duration: string;

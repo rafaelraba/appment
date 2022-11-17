@@ -1,13 +1,13 @@
-import { CourseCreator } from '../../../../../src/Contexts/Mooc/Courses/application/CourseCreator';
-import { Course } from '../../../../../src/Contexts/Mooc/Courses/domain/Course';
+import { PreacherCreator } from '../../../../../src/Contexts/Dosmi/Preachers/application/PreacherCreator';
+import { Preacher } from '../../../../../src/Contexts/Dosmi/Preachers/domain/Preacher';
 import { CourseRepositoryMock } from '../__mocks__/CourseRepositoryMock';
 
 let repository: CourseRepositoryMock;
-let creator: CourseCreator;
+let creator: PreacherCreator;
 
 beforeEach(() => {
   repository = new CourseRepositoryMock();
-  creator = new CourseCreator(repository);
+  creator = new PreacherCreator(repository);
 });
 
 describe('CourseCreator', () => {
@@ -17,7 +17,7 @@ describe('CourseCreator', () => {
     const name = 'some-name';
     const duration = 'some-duration';
 
-    const course = new Course({id, name, duration});
+    const course = new Preacher({id, name, duration});
 
     await creator.run(id, name, duration);
 

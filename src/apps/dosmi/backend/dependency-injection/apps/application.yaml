@@ -1,0 +1,9 @@
+services:
+
+  Apps.dosmi.controllers.StatusGetController:
+    class: ../../controllers/StatusGetController
+    arguments: []
+
+  Apps.dosmi.controllers.PreacherPutController:
+    class: ../../controllers/PreacherPutController
+    arguments: [""]

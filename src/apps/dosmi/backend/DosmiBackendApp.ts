@@ -1,6 +1,6 @@
 import { Server } from './server';
 
-export class MoocBackendApp {
+export class DosmiBackendApp {
   server?: Server;
 
   async start() {

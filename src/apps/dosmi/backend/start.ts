@@ -1,7 +1,7 @@
-import { MoocBackendApp } from './MoocBackendApp';
+import { DosmiBackendApp } from './DosmiBackendApp';
 
 try {
-  new MoocBackendApp().start();
+  new DosmiBackendApp().start();
 } catch (e) {
   console.log(e);
   process.exit(1);
