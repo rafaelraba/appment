@@ -4,6 +4,9 @@ services:
     class: ../../controllers/StatusGetController
     arguments: []
 
-  Apps.dosmi.controllers.PreacherPutController:
-    class: ../../controllers/PreacherPutController
-    arguments: [""]
+  Apps.dosmi.controllers.PreachersPutController:
+    class: ../../controllers/PreachersPutController
+    arguments: []
+
+
+

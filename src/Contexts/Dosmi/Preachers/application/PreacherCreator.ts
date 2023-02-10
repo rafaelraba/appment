@@ -9,8 +9,8 @@ export class PreacherCreator {
   }
 
   async run(id: string, name: string, duration: string): Promise<void> {
-    const course = new Preacher({ id, name, duration });
+    const preacher = new Preacher({ id, name, duration });
 
-    return this.repository.save(course);
+    return this.repository.save(preacher);
   }
 }
