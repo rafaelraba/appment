@@ -8,8 +8,17 @@ export class PreacherCreator {
     this.repository = repository;
   }
 
-  async run(id: string, name: string, duration: string): Promise<void> {
-    const preacher = new Preacher({ id, name, duration });
+  async run(
+    id: string,
+    name: string,
+    preacherType: string,
+    state: string,
+    gender: string,
+    birthdate: string,
+    baptismDate: string,
+    privilege: string
+  ): Promise<void> {
+    const preacher = new Preacher({ id, name, preacherType, state, gender, birthdate, baptismDate, privilege });
 
     return this.repository.save(preacher);
   }

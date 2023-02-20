@@ -1,26 +1,30 @@
 import { PreacherCreator } from '../../../../../src/Contexts/Dosmi/Preachers/application/PreacherCreator';
 import { Preacher } from '../../../../../src/Contexts/Dosmi/Preachers/domain/Preacher';
-import { CourseRepositoryMock } from '../__mocks__/CourseRepositoryMock';
+import { PreacherRepositoryMock } from '../__mocks__/PreacherRepositoryMock';
 
-let repository: CourseRepositoryMock;
+let repository: PreacherRepositoryMock;
 let creator: PreacherCreator;
 
 beforeEach(() => {
-  repository = new CourseRepositoryMock();
+  repository = new PreacherRepositoryMock();
   creator = new PreacherCreator(repository);
 });
 
-describe('CourseCreator', () => {
+describe('PreacherCreator', () => {
   it('should create a valid course', async () => {
-
     const id = 'some-id';
     const name = 'some-name';
-    const duration = 'some-duration';
+    const gender = 'some-gender';
+    const privilege = 'some-privilege';
+    const preacherType = 'some-preacherType';
+    const birthdate = 'some-birthdate';
+    const baptismDate = 'some-baptismDate';
+    const state = 'some-state';
 
-    const course = new Preacher({id, name, duration});
+    const preacher = new Preacher({ id, name, preacherType, state, gender, birthdate, baptismDate, privilege });
 
-    await creator.run(id, name, duration);
+    await creator.run(id, name, preacherType, state, gender, birthdate, baptismDate, privilege);
 
-    repository.assertLastSavedCourseIs(course);
+    repository.assertLastSavedPreacherIs(preacher);
   });
 });
