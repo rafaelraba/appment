@@ -1,4 +1,4 @@
-import { PreacherCreator } from '../../../../../src/Contexts/Dosmi/Preachers/application/PreacherCreator';
+import { PreacherCreator } from '../../../../../src/Contexts/Dosmi/Preachers/application/create/PreacherCreator';
 import { Preacher } from '../../../../../src/Contexts/Dosmi/Preachers/domain/Preacher';
 import { PreacherRepositoryMock } from '../__mocks__/PreacherRepositoryMock';
 
@@ -23,7 +23,7 @@ describe('PreacherCreator', () => {
 
     const preacher = new Preacher({ id, name, preacherType, state, gender, birthdate, baptismDate, privilege });
 
-    await creator.run(id, name, preacherType, state, gender, birthdate, baptismDate, privilege);
+    await creator.run({ id, name, preacherType, state, gender, birthdate, baptismDate, privilege });
 
     repository.assertLastSavedPreacherIs(preacher);
   });
