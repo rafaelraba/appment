@@ -16,14 +16,14 @@ describe('PreacherCreator', () => {
     const name = 'some-name';
     const gender = 'some-gender';
     const privilege = 'some-privilege';
-    const preacherType = 'some-preacherType';
+    const type = 'some-preacherType';
     const birthdate = 'some-birthdate';
     const baptismDate = 'some-baptismDate';
     const state = 'some-state';
 
-    const preacher = new Preacher({ id, name, preacherType, state, gender, birthdate, baptismDate, privilege });
+    const preacher = new Preacher({ id, name, type, state, gender, birthdate, baptismDate, privilege });
 
-    await creator.run({ id, name, preacherType, state, gender, birthdate, baptismDate, privilege });
+    await creator.run({ id, name, type, state, gender, birthdate, baptismDate, privilege });
 
     repository.assertLastSavedPreacherIs(preacher);
   });

@@ -1,0 +1,9 @@
+services:
+  Dosmi.Preachers.application.PreacherCreator:
+    class: ../../../../../Contexts/Dosmi/Preachers/application/create/PreacherCreator
+    arguments: [ "@Dosmi.Preachers.domain.PreacherRepository" ]
+
+  Dosmi.Preachers.domain.PreacherRepository:
+    class: ../../../../../Contexts/Dosmi/Preachers/infrastructure/persistence/FilePreacherRepository
+    arguments: [ "" ]
+

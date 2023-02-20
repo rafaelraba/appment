@@ -13,7 +13,7 @@ Feature: Create a new preacher
       "baptismDate": "2002-12-14",
       "state":"ACTIVE",
       "privilege":"ELDER",
-      "preacherType":"PREACHER"
+      "type":"PREACHER"
     }
     """
     Then the response status code should be 201
@@ -29,7 +29,7 @@ Feature: Create a new preacher
       "baptismDate": "2002-12-14",
       "state":1,
       "privilege":"ELDER",
-      "preacherType":"PREACHER"
+      "type":"PREACHER"
     }
     """
     Then the response status code should be 422

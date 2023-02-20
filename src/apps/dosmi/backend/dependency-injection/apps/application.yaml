@@ -6,7 +6,7 @@ services:
 
   Apps.dosmi.controllers.PreachersPutController:
     class: ../../controllers/PreachersPutController
-    arguments: []
+    arguments: ['@Dosmi.Preachers.application.PreacherCreator']
 
 
 

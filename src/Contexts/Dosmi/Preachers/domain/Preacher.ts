@@ -1,7 +1,7 @@
 export class Preacher {
   readonly id: string;
   readonly name: string;
-  readonly preacherType: string;
+  readonly type: string;
   readonly state: string;
   readonly gender: string;
   readonly birthdate: string;
@@ -11,7 +11,7 @@ export class Preacher {
   constructor({
     id,
     name,
-    preacherType,
+    type,
     state,
     gender,
     birthdate,
@@ -20,7 +20,7 @@ export class Preacher {
   }: {
     id: string;
     name: string;
-    preacherType: string;
+    type: string;
     state: string;
     gender: string;
     birthdate: string;
@@ -29,7 +29,7 @@ export class Preacher {
   }) {
     this.id = id;
     this.name = name;
-    this.preacherType = preacherType;
+    this.type = type;
     this.state = state;
     this.gender = gender;
     this.birthdate = birthdate;

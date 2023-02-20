@@ -13,7 +13,7 @@ export class PreacherCreator {
     const preacher = new Preacher({
       id: request.id,
       name: request.name,
-      preacherType: request.preacherType,
+      type: request.type,
       state: request.state,
       gender: request.gender,
       birthdate: request.birthdate,

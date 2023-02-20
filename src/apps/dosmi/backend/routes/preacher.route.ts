@@ -9,7 +9,7 @@ export const register = (router: Router) => {
     body('name').exists().isString(),
     body('gender').exists().isString(),
     body('state').exists().isString(),
-    body('preacherType').exists().isString(),
+    body('type').exists().isString(),
   ]
   const preachersPutController: PreachersPutController = container.get('Apps.dosmi.controllers.PreachersPutController');
   router.put('/preachers/:id', reqSchema, validateReqSchema, (req: Request, res: Response) => preachersPutController.run(req, res));

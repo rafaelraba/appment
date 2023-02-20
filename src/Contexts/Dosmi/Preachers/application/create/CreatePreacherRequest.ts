@@ -3,7 +3,7 @@ export interface CreatePreacherRequest {
   name: string;
   gender: string;
   state: string;
-  preacherType: string;
+  type: string;
   birthdate: string;
   baptismDate: string;
   privilege: string;
