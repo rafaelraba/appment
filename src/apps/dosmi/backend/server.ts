@@ -10,7 +10,7 @@ import { registerRoutes } from './routes';
 
 export class Server {
   private express: express.Express;
-  private port: string;
+  private readonly port: string;
   private httpServer?: http.Server;
 
   constructor(port: string) {

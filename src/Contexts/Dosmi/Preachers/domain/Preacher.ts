@@ -1,5 +1,7 @@
+import { Uuid } from "../../../Shared/domain/value-object/Uuid";
+
 export class Preacher {
-  readonly id: string;
+  readonly id: Uuid;
   readonly name: string;
   readonly type: string;
   readonly state: string;
@@ -18,7 +20,7 @@ export class Preacher {
     baptismDate,
     privilege
   }: {
-    id: string;
+    id: Uuid;
     name: string;
     type: string;
     state: string;
