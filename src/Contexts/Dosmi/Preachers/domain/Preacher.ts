@@ -1,8 +1,9 @@
-import { Uuid } from "../../../Shared/domain/value-object/Uuid";
+import { PreacherId } from "./PreacherId";
+import { PreacherName } from "./PreacherName";
 
 export class Preacher {
-  readonly id: Uuid;
-  readonly name: string;
+  readonly id: PreacherId;
+  readonly name: PreacherName;
   readonly type: string;
   readonly state: string;
   readonly gender: string;
@@ -20,7 +21,7 @@ export class Preacher {
     baptismDate,
     privilege
   }: {
-    id: Uuid;
+    id: string;
     name: string;
     type: string;
     state: string;
@@ -29,8 +30,8 @@ export class Preacher {
     baptismDate: string;
     privilege: string;
   }) {
-    this.id = id;
-    this.name = name;
+    this.id = new PreacherId(id);
+    this.name = new PreacherName(name);
     this.type = type;
     this.state = state;
     this.gender = gender;

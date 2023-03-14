@@ -12,7 +12,7 @@ beforeEach(() => {
 });
 
 describe('PreacherCreator', () => {
-  it('should create a valid course', async () => {
+  it('should create a valid preacher', async () => {
     const id = new Uuid('7fc35b52-8b4c-40dd-bc2b-9de11c6c2258');
     const name = 'some-name';
     const gender = 'some-gender';
