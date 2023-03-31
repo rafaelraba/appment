@@ -4,7 +4,7 @@ export interface CreatePreacherRequest {
   gender: string;
   state: string;
   type: string;
-  birthdate: string;
-  baptismDate: string;
+  birthdate: Date;
+  baptismDate: Date;
   privilege: string;
 }

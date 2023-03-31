@@ -10,7 +10,7 @@ export class PreacherCreator {
   }
 
   async run(request: CreatePreacherRequest): Promise<void> {
-    const preacher = new Preacher({
+    const preacher = Preacher.singUp({
       id: request.id,
       name: request.name,
       type: request.type,

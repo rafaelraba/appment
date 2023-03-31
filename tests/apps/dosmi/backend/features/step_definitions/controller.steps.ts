@@ -25,7 +25,7 @@ Then('the response should be empty', () => {
 
 BeforeAll(async () => {
   application = new DosmiBackendApp();
-  await application.start();
+  await application.  start();
 });
 
 AfterAll(async () => {
