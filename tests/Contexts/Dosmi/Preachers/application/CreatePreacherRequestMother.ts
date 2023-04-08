@@ -1,14 +1,56 @@
 import {
   CreatePreacherRequest
-} from "../../../../../src/Contexts/Dosmi/Preachers/application/create/CreatePreacherRequest";
+} from '../../../../../src/Contexts/Dosmi/Preachers/application/create/CreatePreacherRequest';
+import { PreacherId } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherId';
+import { PreacherName } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherName';
+import { PreacherGender } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherGender';
+import { PreacherPrivilege } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherPrivilege';
+import { PreacherType } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherType';
+import { PreacherBirthdate } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherBirthdate';
+import { PreacherBaptismDate } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherBaptismDate';
+import { PreacherState } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherState';
+import { PreacherIdMother } from '../domain/PreacherIdMother';
+import { PreacherNameMother } from '../domain/PreacherNameMother';
+import { PreacherStateMother } from '../domain/PreacherStateMother';
+import { PreacherGenderMother } from '../domain/PreacherGenderMother';
+import { PreacherPrivilegeMother } from '../domain/PreacherPrivilegeMother';
+import { PreacherTypeMother } from '../domain/PreacherTypeMother';
+import { PreacherBirthdateMother } from '../domain/PreacherBirthdateMother';
+import { PreacherBaptismDateMother } from '../domain/PreacherBaptismDateMother';
 
 export class CreatePreacherRequestMother {
-  static create(id: string, name: string, gender: string, privilege: string, type: string, birthdate: Date,
-                baptismDate: Date, state: string): CreatePreacherRequest {
-    return {id, name, gender, privilege, type, state, baptismDate, birthdate}
+  static create(
+    id: PreacherId,
+    name: PreacherName,
+    gender: PreacherGender,
+    privilege: PreacherPrivilege,
+    type: PreacherType,
+    birthdate: PreacherBirthdate,
+    baptismDate: PreacherBaptismDate,
+    state: PreacherState
+  ): CreatePreacherRequest {
+    return {
+      id: id.value,
+      name: name.value,
+      gender: gender.value,
+      privilege: privilege.value,
+      type: type.value,
+      state: state.value,
+      baptismDate: baptismDate.value,
+      birthdate: birthdate.value
+    };
   }
 
-  static random() {
+  static random(): CreatePreacherRequest {
+    return this.create(
+      PreacherIdMother.random(),
+      PreacherNameMother.random(),
+      PreacherGenderMother.random(),
+      PreacherPrivilegeMother.random(),
+      PreacherTypeMother.random(),
+      PreacherBirthdateMother.random(),
+      PreacherBaptismDateMother.random(),
+      PreacherStateMother.random()
+    );
   }
-
 }
