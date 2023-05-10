@@ -6,8 +6,9 @@ import { PreacherGender } from './PreacherGender';
 import { PreacherBirthdate } from './PreacherBirthdate';
 import { PreacherBaptismDate } from './PreacherBaptismDate';
 import { PreacherPrivilege } from './PreacherPrivilege';
+import { AggregateRoot } from "../../../Shared/domain/AggregateRoot";
 
-export class Preacher {
+export class Preacher extends AggregateRoot{
   readonly id: PreacherId;
   readonly name: PreacherName;
   readonly type: PreacherType;
@@ -30,6 +31,7 @@ export class Preacher {
         privilege: PreacherPrivilege,
       }
   ) {
+    super();
     this.id = id;
     this.name = name;
     this.type = type;
@@ -64,6 +66,19 @@ export class Preacher {
       baptismDate: new PreacherBaptismDate(baptismDate),
       privilege: new PreacherPrivilege(privilege)
     });
+  }
+
+  toPrimitives(): any {
+    return {
+      id: this.id.value,
+      name: this.name.value,
+      gender: this.gender.value,
+      state: this.state.value,
+      type: this.type.value,
+      birthdate: this.birthdate.value,
+      baptismDate: this.baptismDate.value,
+      privilege: this.privilege.value,
+    }
   }
 
 }
