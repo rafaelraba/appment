@@ -1,7 +1,7 @@
 import { AggregateRoot } from '../../../domain/AggregateRoot';
 import { Collection, MongoClient, ObjectId } from 'mongodb';
 
-export abstract class MongoRespository<T extends AggregateRoot> {
+export abstract class MongoRepository<T extends AggregateRoot> {
   protected constructor(private _client: Promise<MongoClient>) {}
 
   protected abstract collectionName(): string;
@@ -10,11 +10,15 @@ export abstract class MongoRespository<T extends AggregateRoot> {
     return (await this._client).db().collection(this.collectionName());
   }
 
-  protected async presist(id: string, aggregateRoot: T): Promise<void> {
+  protected async persist(id: string, aggregateRoot: T): Promise<void> {
     const collection = await this.collection();
 
     const document = { ...aggregateRoot.toPrimitives(), _id: id, id: undefined };
 
-    await collection.updateOne({ _id: new ObjectId(id) }, { $set: document }, { upsert: true });
+    await collection.updateOne({ _id: this.mongoId(id) }, { $set: document }, { upsert: true });
+  }
+
+  protected mongoId(id: string): ObjectId {
+    return new ObjectId(id);
   }
 }

@@ -1,5 +1,5 @@
-import { Preacher } from '../../domain/Preacher';
-import { PreacherRepository } from '../../domain/PreacherRepository';
+import { Preacher } from '../../domain';
+import { PreacherRepository } from '../../domain';
 import { CreatePreacherRequest } from './CreatePreacherRequest';
 
 export class PreacherCreator {
@@ -10,7 +10,7 @@ export class PreacherCreator {
   }
 
   async run(request: CreatePreacherRequest): Promise<void> {
-    const preacher = Preacher.singUp({
+    const preacher = Preacher.fromPrimitives({
       id: request.id,
       name: request.name,
       type: request.type,

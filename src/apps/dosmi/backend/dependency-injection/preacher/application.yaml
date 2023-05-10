@@ -1,9 +1,20 @@
 services:
+  Dosmi.MongoConfig:
+    factory:
+      class: ../../../../../Contexts/Dosmi/Shared/infrastructure/persistence/mongo/MongoConfigFactory
+      method: 'createConfig'
+
+  Dosmi.MongoClient:
+    factory:
+      class: ../../../../../Contexts/Dosmi/Shared/infrastructure/persistence/mongo/MongoClientFactory
+      method: 'createClient'
+    arguments: ['dosmi', '@Dosmi.MongoConfig']
+
+  Dosmi.Preachers.domain.PreacherRepository:
+    class: ../../../../../Contexts/Dosmi/Preachers/infrastructure/persistence/MongoPreacherRepository
+    arguments: [ "@Dosmi.MongoClient" ]
+
   Dosmi.Preachers.application.PreacherCreator:
     class: ../../../../../Contexts/Dosmi/Preachers/application/create/PreacherCreator
     arguments: [ "@Dosmi.Preachers.domain.PreacherRepository" ]
-
-  Dosmi.Preachers.domain.PreacherRepository:
-    class: ../../../../../Contexts/Dosmi/Preachers/infrastructure/persistence/FilePreacherRepository
-    arguments: [ "" ]
 

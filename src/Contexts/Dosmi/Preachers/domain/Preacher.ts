@@ -6,9 +6,9 @@ import { PreacherGender } from './PreacherGender';
 import { PreacherBirthdate } from './PreacherBirthdate';
 import { PreacherBaptismDate } from './PreacherBaptismDate';
 import { PreacherPrivilege } from './PreacherPrivilege';
-import { AggregateRoot } from "../../../Shared/domain/AggregateRoot";
+import { AggregateRoot } from '../../../Shared/domain/AggregateRoot';
 
-export class Preacher extends AggregateRoot{
+export class Preacher extends AggregateRoot {
   readonly id: PreacherId;
   readonly name: PreacherName;
   readonly type: PreacherType;
@@ -18,19 +18,25 @@ export class Preacher extends AggregateRoot{
   readonly baptismDate: PreacherBaptismDate;
   readonly privilege: PreacherPrivilege;
 
-  constructor(
-    { id, name, type, state, gender, birthdate, baptismDate, privilege }:
-      {
-        id: PreacherId,
-        name: PreacherName,
-        type: PreacherType,
-        state: PreacherState,
-        gender: PreacherGender,
-        birthdate: PreacherBirthdate,
-        baptismDate: PreacherBaptismDate,
-        privilege: PreacherPrivilege,
-      }
-  ) {
+  constructor({
+    id,
+    name,
+    type,
+    state,
+    gender,
+    birthdate,
+    baptismDate,
+    privilege
+  }: {
+    id: PreacherId;
+    name: PreacherName;
+    type: PreacherType;
+    state: PreacherState;
+    gender: PreacherGender;
+    birthdate: PreacherBirthdate;
+    baptismDate: PreacherBaptismDate;
+    privilege: PreacherPrivilege;
+  }) {
     super();
     this.id = id;
     this.name = name;
@@ -42,20 +48,25 @@ export class Preacher extends AggregateRoot{
     this.privilege = privilege;
   }
 
-  static singUp(
-    { id, type, name, state, gender, birthdate, baptismDate, privilege }:
-      {
-        id: string,
-        name: string,
-        type: string
-        state: string,
-        gender: string,
-        birthdate: Date,
-        baptismDate: Date,
-        privilege: string
-      }
-  ): Preacher {
-
+  static fromPrimitives({
+    id,
+    type,
+    name,
+    state,
+    gender,
+    birthdate,
+    baptismDate,
+    privilege
+  }: {
+    id: string;
+    name: string;
+    type: string;
+    state: string;
+    gender: string;
+    birthdate: Date;
+    baptismDate: Date;
+    privilege: string;
+  }): Preacher {
     return new Preacher({
       id: new PreacherId(id),
       name: new PreacherName(name),
@@ -77,8 +88,7 @@ export class Preacher extends AggregateRoot{
       type: this.type.value,
       birthdate: this.birthdate.value,
       baptismDate: this.baptismDate.value,
-      privilege: this.privilege.value,
-    }
+      privilege: this.privilege.value
+    };
   }
-
 }

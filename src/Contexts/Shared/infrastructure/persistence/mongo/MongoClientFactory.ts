@@ -4,7 +4,7 @@ import { MongoConfig } from './MongoConfig';
 export class MongoClientFactory {
   private static clients: { [key: string]: MongoClient } = {};
 
-  static async createClient(contextName: string, config: MongoConfig) {
+  static async createClient(contextName: string, config: MongoConfig): Promise<MongoClient> {
     let client = MongoClientFactory.getClient(contextName);
 
     if (!client) {
