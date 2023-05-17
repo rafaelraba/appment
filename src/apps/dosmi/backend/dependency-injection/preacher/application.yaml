@@ -6,7 +6,7 @@ services:
 
   Dosmi.MongoClient:
     factory:
-      class: ../../../../../Contexts/Dosmi/Shared/infrastructure/persistence/mongo/MongoClientFactory
+      class: ../../../../../Contexts/Shared/infrastructure/persistence/mongo/MongoClientFactory
       method: 'createClient'
     arguments: ['dosmi', '@Dosmi.MongoConfig']
 

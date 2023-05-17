@@ -23,7 +23,7 @@
     "build:clean": "rm -r dist; exit 0"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "1.19.1",
     "bodybuilder": "^2.4.0",
     "bson": "^4.5.2",
     "compression": "^1.7.4",
@@ -39,7 +39,7 @@
     "glob": "^7.2.0",
     "helmet": "^4.6.0",
     "http-status": "^1.5.0",
-    "mongodb": "^5.4.0",
+    "mongodb": "^4.0.0",
     "node-dependency-injection": "^2.7.1",
     "nunjucks": "^3.2.3",
     "ts-node": "^10.2.1",

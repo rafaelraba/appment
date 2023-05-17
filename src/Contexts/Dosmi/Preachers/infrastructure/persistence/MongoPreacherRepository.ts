@@ -20,7 +20,7 @@ export class MongoPreacherRepository extends MongoRepository<Preacher> implement
 
   public async search(id: PreacherId): Promise<Preacher | null> {
     const collection = await this.collection();
-    const document = await collection.findOne<PreacherDocument>({ _id: this.mongoId(id.value) });
+    const document = await collection.findOne<PreacherDocument>({ _id: id.value});
     return document
       ? Preacher.fromPrimitives({
           id: document._id.toString(),

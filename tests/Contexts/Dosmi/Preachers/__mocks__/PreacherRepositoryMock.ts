@@ -1,5 +1,4 @@
-import { PreacherRepository } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherRepository';
-import { Preacher } from '../../../../../src/Contexts/Dosmi/Preachers/domain/Preacher';
+import { Preacher, PreacherId, PreacherRepository } from "../../../../../src/Contexts/Dosmi/Preachers/domain";
 
 export class PreacherRepositoryMock implements PreacherRepository {
   private mockSave = jest.fn();
@@ -13,6 +12,10 @@ export class PreacherRepositoryMock implements PreacherRepository {
     const lastSavedPreacher = mock.calls[mock.calls.length - 1][0] as Preacher;
     expect(lastSavedPreacher).toBeInstanceOf(Preacher);
     expect(lastSavedPreacher.id).toEqual(expected.id);
+  }
+
+  search(id: PreacherId): Promise<Preacher | null> {
+    return Promise.resolve(null);
   }
 
 }
