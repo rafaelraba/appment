@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Scenario: A valid non existing preacher" type="cucumber.js" factoryName="Cucumber.js">
+    <option name="myFilePath" value="$PROJECT_DIR$/tests/apps/dosmi/backend/features/preachers/create-preacher.feature" />
+    <option name="myNameFilter" value="^A valid non existing preacher$" />
+    <option name="cucumberJsArguments" value="-p dosmi_backend" />
+    <option name="workingDirectory" value="$PROJECT_DIR$" />
+    <method v="2" />
+  </configuration>
+</component>

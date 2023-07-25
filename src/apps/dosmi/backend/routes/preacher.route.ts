@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import container from '../dependency-injection';
+import { container } from '../dependency-injection';
 import { PreachersPutController } from '../controllers/PreachersPutController';
 import { body } from "express-validator";
 import { validateReqSchema } from "./index";

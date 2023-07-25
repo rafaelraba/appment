@@ -4,7 +4,7 @@ Feature: Create a new preacher
   I want to create a new course
 
   Scenario: A valid non existing preacher
-    Given I send a PUT request to "/preachers/84517866-1c59-4384-8c09-e5c9babeba55" with body:
+    Given I send a PUT request to "/preachers/84517866-1c59-4384-8c09-e5c9babeba56" with body:
     """
     {
       "name": "Rafael Eduardo Rafael Moreno",
