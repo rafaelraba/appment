@@ -1,4 +1,4 @@
-import { PreacherBaptismDate } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherBaptismDate';
+import { PreacherBaptismDate } from '../../../../../src/Contexts/Dosmi/Preachers/domain';
 import { DateMother } from '../../../Shared/domain/DateMother';
 
 export class PreacherBaptismDateMother {

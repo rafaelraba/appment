@@ -1,4 +1,4 @@
-import { PreacherId } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherId';
+import { PreacherId } from '../../../../../src/Contexts/Dosmi/Preachers/domain';
 import { UuidMother } from '../../../Shared/domain/UuidMother';
 
 export class PreacherIdMother {

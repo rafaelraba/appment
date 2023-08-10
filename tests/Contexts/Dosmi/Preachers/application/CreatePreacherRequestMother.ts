@@ -1,14 +1,14 @@
 import {
   CreatePreacherRequest
 } from '../../../../../src/Contexts/Dosmi/Preachers/application/create/CreatePreacherRequest';
-import { PreacherId } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherId';
-import { PreacherName } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherName';
-import { PreacherGender } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherGender';
+import { PreacherId } from '../../../../../src/Contexts/Dosmi/Preachers/domain';
+import { PreacherName } from '../../../../../src/Contexts/Dosmi/Preachers/domain';
+import { PreacherGender } from '../../../../../src/Contexts/Dosmi/Preachers/domain';
 import { PreacherPrivilege } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherPrivilege';
-import { PreacherType } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherType';
+import { PreacherType } from '../../../../../src/Contexts/Dosmi/Preachers/domain';
 import { PreacherBirthdate } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherBirthdate';
-import { PreacherBaptismDate } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherBaptismDate';
-import { PreacherState } from '../../../../../src/Contexts/Dosmi/Preachers/domain/PreacherState';
+import { PreacherBaptismDate } from '../../../../../src/Contexts/Dosmi/Preachers/domain';
+import { PreacherState } from '../../../../../src/Contexts/Dosmi/Preachers/domain';
 import { PreacherIdMother } from '../domain/PreacherIdMother';
 import { PreacherNameMother } from '../domain/PreacherNameMother';
 import { PreacherStateMother } from '../domain/PreacherStateMother';

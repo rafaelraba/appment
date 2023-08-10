@@ -17,4 +17,5 @@ export abstract class MongoRepository<T extends AggregateRoot> {
 
     await collection.updateOne({ _id: id }, { $set: document }, { upsert: true });
   }
+
 }

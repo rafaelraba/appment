@@ -6,3 +6,5 @@ export { PreacherRepository } from './PreacherRepository';
 export { PreacherBaptismDate } from './PreacherBaptismDate';
 export { PreacherState } from './PreacherState';
 export { PreacherType } from './PreacherType';
+export { PreacherPrivilege } from './PreacherPrivilege';
+export { PreacherBirthdate } from './PreacherBirthdate';
