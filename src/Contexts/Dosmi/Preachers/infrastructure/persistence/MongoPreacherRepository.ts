@@ -1,5 +1,5 @@
 import { MongoRepository } from '../../../../Shared/infrastructure/persistence/mongo/MongoRepository';
-import { Preacher, PreacherId, PreacherRepository } from "../../domain";
+import { Preacher, PreacherId, PreacherRepository } from '../../domain';
 import { ObjectId } from 'mongodb';
 
 interface PreacherDocument {
@@ -20,7 +20,7 @@ export class MongoPreacherRepository extends MongoRepository<Preacher> implement
 
   public async search(id: PreacherId): Promise<Preacher | null> {
     const collection = await this.collection();
-    const document = await collection.findOne<PreacherDocument>({ _id: id.value});
+    const document = await collection.findOne<PreacherDocument>({ _id: id.value });
     return document
       ? Preacher.fromPrimitives({
           id: document._id.toString(),
