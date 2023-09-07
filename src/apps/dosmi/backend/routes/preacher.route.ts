@@ -14,5 +14,3 @@ export const register = (router: Router) => {
   const preachersPutController: PreachersPutController = container.get('Apps.dosmi.controllers.PreachersPutController');
   router.put('/preachers/:id', reqSchema, validateReqSchema, (req: Request, res: Response) => preachersPutController.run(req, res));
 };
-
-

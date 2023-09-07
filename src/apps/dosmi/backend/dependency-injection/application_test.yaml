@@ -3,5 +3,6 @@ imports:
 
 services:
   Dosmi.EnvironmentArranger:
-    class: ../../../../../tests/Contexts/Shared/infrastructure/mongo/MongoEnvironmentArranger
-    arguments: ['@Dosmi.MongoClient']
+    class: ../../../../../tests/Contexts/Shared/infrastructure/mongo/MongooseEnvironmentArranger
+    arguments: ['@Dosmi.MongooseConnection']
+
