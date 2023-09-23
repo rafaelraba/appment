@@ -1,17 +1,7 @@
 services:
-  Dosmi.MongoConfig:
-    factory:
-      class: ../../../../../Contexts/Dosmi/Shared/infrastructure/persistence/mongo/MongoConfigFactory
-      method: 'createConfig'
-
-  Dosmi.MongooseConnection:
-    factory:
-      class: ../../../../../Contexts/Shared/infrastructure/persistence/mongo/MongooseConnectionFactory
-      method: 'createConnection'
-    arguments: ['dosmi', '@Dosmi.MongoConfig']
 
   Dosmi.Preachers.domain.PreacherRepository:
-    class: ../../../../../Contexts/Dosmi/Preachers/infrastructure/persistence/MongoPreacherRepository
+    class: ../../../../../Contexts/Dosmi/Preachers/infrastructure/persistence/mongo/MongoPreacherRepository
     arguments: [ "@Dosmi.MongooseConnection" ]
 
   Dosmi.Preachers.application.PreacherCreator:

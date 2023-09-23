@@ -8,6 +8,6 @@ export class SectionSearcher {
   }
 
   async run() {
-    await this.repository.search();
+    return await this.repository.search();
   }
 }

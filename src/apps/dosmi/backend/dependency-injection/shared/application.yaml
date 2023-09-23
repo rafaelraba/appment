@@ -1,0 +1,11 @@
+services:
+  Dosmi.MongoConfig:
+    factory:
+      class: ../../../../../Contexts/Dosmi/Shared/infrastructure/persistence/mongo/MongoConfigFactory
+      method: 'createConfig'
+
+  Dosmi.MongooseConnection:
+    factory:
+      class: ../../../../../Contexts/Shared/infrastructure/persistence/mongo/MongooseConnectionFactory
+      method: 'createConnection'
+    arguments: ['dosmi', '@Dosmi.MongoConfig']

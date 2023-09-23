@@ -1,7 +1,7 @@
-import { container, loadContainer } from '../../../../../../src/apps/dosmi/backend/dependency-injection';
-import { PreacherRepository } from '../../../../../../src/Contexts/Dosmi/Preachers/domain';
-import { EnvironmentArranger } from '../../../../Shared/Infrastructure/arrange/EnvironmentArranger';
-import { PreacherMother } from '../../domain/PreacherMother';
+import { container, loadContainer } from '../../../../../../../src/apps/dosmi/backend/dependency-injection';
+import { PreacherRepository } from '../../../../../../../src/Contexts/Dosmi/Preachers/domain';
+import { EnvironmentArranger } from '../../../../../Shared/Infrastructure/arrange/EnvironmentArranger';
+import { PreacherMother } from '../../../domain/PreacherMother';
 
 let environmentArranger: Promise<EnvironmentArranger>;
 let repository: PreacherRepository;
