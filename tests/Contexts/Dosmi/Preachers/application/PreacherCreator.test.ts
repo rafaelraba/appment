@@ -21,3 +21,4 @@ describe('PreacherCreator', () => {
     repository.assertLastSavedPreacherIs(preacher);
   });
 });
+
