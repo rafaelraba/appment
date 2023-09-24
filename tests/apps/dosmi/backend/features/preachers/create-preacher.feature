@@ -1,7 +1,7 @@
 Feature: Create a new preacher
-  In order to have courses in the platform
+  In order to have preachers in the platform
   As a user with admin permissions
-  I want to create a new course
+  I want to create a new preacher
 
   Scenario: A valid non existing preacher
     Given I send a PUT request to "/preachers/84517866-1c59-4384-8c09-e5c9babeba56" with body:

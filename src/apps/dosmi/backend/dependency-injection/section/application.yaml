@@ -4,8 +4,8 @@ services:
     class: ../../../../../Contexts/Dosmi/Sections/infrastructure/persistence/mongo/MongoSectionRepository
     arguments: [ "@Dosmi.MongooseConnection" ]
 
-  Dosmi.Sections.application.SectionSearcher:
-    class: ../../../../../Contexts/Dosmi/Sections/application/search/SectionSearcher
+  Dosmi.Sections.application.SectionsSearcher:
+    class: ../../../../../Contexts/Dosmi/Sections/application/search/SectionsSearcher
     arguments: [ "@Dosmi.Sections.domain.SectionRepository" ]
 
 

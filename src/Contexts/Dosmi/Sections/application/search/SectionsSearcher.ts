@@ -1,6 +1,6 @@
 import { SectionRepository } from '../../domain/SectionRepository';
 
-export class SectionSearcher {
+export class SectionsSearcher {
   private readonly repository: SectionRepository;
 
   constructor(repository: SectionRepository) {

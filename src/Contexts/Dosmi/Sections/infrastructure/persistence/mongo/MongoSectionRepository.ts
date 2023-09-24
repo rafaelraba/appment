@@ -17,11 +17,10 @@ export class MongoSectionRepository extends MongooseRepository<Section> implemen
 
   async search(): Promise<Section[]> {
     const model = await this.model(this.schema());
-    const documents = await model.find<Section>();
+    const documents = await model.find();
     return documents.map(document => {
-      console.log(document)
       return Section.fromPrimitives({
-        id: document.id.value,
+        id: document._id as string,
         name: document.name.value,
         code: document.code.value,
         value: document.value.value

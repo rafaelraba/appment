@@ -20,11 +20,10 @@ export class MongoPreacherRepository extends MongooseRepository<Preacher> implem
 
   public async search(id: PreacherId): Promise<Preacher | null> {
     const model = await this.model(this.schema());
-    const document = await model.findOne<Preacher>({ _id: id.value });
-
+    const document = await model.findOne({ _id: id.value });
     return document
       ? Preacher.fromPrimitives({
-          id: document.id.value,
+          id: id.value,
           type: document.type.value,
           name: document.name.value,
           state: document.state.value,

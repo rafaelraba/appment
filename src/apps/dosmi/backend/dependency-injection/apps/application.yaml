@@ -8,5 +8,9 @@ services:
     class: ../../controllers/PreachersPutController
     arguments: ['@Dosmi.Preachers.application.PreacherCreator']
 
+  Apps.dosmi.controllers.SectionsGetController:
+    class: ../../controllers/SectionsGetController
+    arguments: ['@Dosmi.Sections.application.SectionsSearcher']
+
 
 
