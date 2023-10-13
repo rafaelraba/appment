@@ -23,7 +23,6 @@ export class PreachersPutController implements Controller {
   }
 
   async run(req: PreacherPutRequest, res: Response): Promise<void> {
-    console.log(this.preacherCreator)
     const id = req.params.id;
     const { name, gender, type, privilege, state, birthdate, baptismDate } = req.body;
     await this.preacherCreator.run({ id, name, gender, type, privilege, state, birthdate, baptismDate });
