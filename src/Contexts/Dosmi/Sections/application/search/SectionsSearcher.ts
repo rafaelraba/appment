@@ -8,6 +8,7 @@ export class SectionsSearcher {
   }
 
   async run() {
-    return await this.repository.search();
+    const sections = await this.repository.search()
+    return sections.map(section => section.toPrimitives());
   }
 }

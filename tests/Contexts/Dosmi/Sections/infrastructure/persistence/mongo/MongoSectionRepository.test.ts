@@ -24,7 +24,6 @@ describe('SectionRepository', () => {
   describe('search', () => {
     it('should search all sections', async () => {
     const section = SectionMother.random();
-    console.log(section)
     await repository.save(section);
 
     const sections = await repository.search();

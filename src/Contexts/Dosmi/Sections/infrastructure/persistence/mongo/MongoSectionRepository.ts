@@ -21,9 +21,9 @@ export class MongoSectionRepository extends MongooseRepository<Section> implemen
     return documents.map(document => {
       return Section.fromPrimitives({
         id: document._id as string,
-        name: document.name.value,
-        code: document.code.value,
-        value: document.value.value
+        name: document.name,
+        code: document.code,
+        value: document.value
       });
     });
   }
