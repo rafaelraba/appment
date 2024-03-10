@@ -1,0 +1,10 @@
+services:
+
+  Dosmi.Publishers.domain.PublisherRepository:
+    class: ../../../../../Contexts/Dosmi/Publishers/infrastructure/persistence/mongo/MongoPublisherRepository
+    arguments: [ "@Dosmi.MongooseConnection" ]
+
+  Dosmi.Publishers.application.PublisherCreator:
+    class: ../../../../../Contexts/Dosmi/Publishers/application/create/PublisherCreator
+    arguments: [ "@Dosmi.Publishers.domain.PublisherRepository" ]
+

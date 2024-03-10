@@ -4,9 +4,9 @@ services:
     class: ../../controllers/StatusGetController
     arguments: []
 
-  Apps.dosmi.controllers.PreachersPutController:
-    class: ../../controllers/PreachersPutController
-    arguments: ['@Dosmi.Preachers.application.PreacherCreator']
+  Apps.dosmi.controllers.PublishersPutController:
+    class: ../../controllers/PublishersPutController
+    arguments: ['@Dosmi.Publishers.application.PublisherCreator']
 
   Apps.dosmi.controllers.SectionsGetController:
     class: ../../controllers/SectionsGetController

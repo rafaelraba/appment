@@ -6,6 +6,7 @@ import Router from 'express-promise-router';
 import helmet from 'helmet';
 import * as http from 'http';
 import httpStatus from 'http-status';
+import cors from 'cors';
 import { registerRoutes } from './routes';
 
 export class Server {
@@ -16,6 +17,7 @@ export class Server {
   constructor(port: string) {
     this.port = port;
     this.express = express();
+    this. express.use(cors())
     this.express.use(json());
     this.express.use(urlencoded({ extended: true }));
     this.express.use(helmet.xssFilter());

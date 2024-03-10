@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 import { container } from '../dependency-injection';
-import { PreachersPutController } from '../controllers/PreachersPutController';
+import { PublishersPutController } from '../controllers/PublishersPutController';
 import { body } from "express-validator";
 import { validateReqSchema } from "./index";
 
@@ -11,6 +11,6 @@ export const register = (router: Router) => {
     body('state').exists().isString(),
     body('type').exists().isString(),
   ]
-  const preachersPutController: PreachersPutController = container.get('Apps.dosmi.controllers.PreachersPutController');
-  router.put('/preachers/:id', reqSchema, validateReqSchema, (req: Request, res: Response) => preachersPutController.run(req, res));
+  const publishersPutController: PublishersPutController = container.get('Apps.dosmi.controllers.PublishersPutController');
+  router.put('/publishers/:id', reqSchema, validateReqSchema, (req: Request, res: Response) => publishersPutController.run(req, res));
 };
